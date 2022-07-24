@@ -12,7 +12,7 @@ Server is listening to Port 5000
 ![image](https://user-images.githubusercontent.com/32095032/180641094-3e49881c-c2b0-4a81-b3c9-eb9f4eee5ef2.png)
 ## Adding meal
 2. http://localhost:5000/api/v1/addmeal
-![image](https://user-images.githubusercontent.com/32095032/180641287-2c6d36c1-437c-4ddb-ab14-c9a3e5e192e2.png)
+![image](https://user-images.githubusercontent.com/32095032/180643098-c2490de7-8c15-47c9-8b45-82e40248e398.png)
 ## Adding User
 3. http://localhost:5000/api/v1/adduser
 ![image](https://user-images.githubusercontent.com/32095032/180641297-c6d8769a-bd56-49b6-9d4e-39ce99d1f5d7.png)
