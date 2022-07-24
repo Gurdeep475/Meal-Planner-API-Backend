@@ -6,8 +6,7 @@ exports.addUser = async (req, res) => {
     const includedMealPlanList = req.body.mealPlan;
     const fetchedMealList = await meal.find().select("_id name");
 
-
-    includedMealPlanList.forEach((includedMealPlan,index) => {
+    includedMealPlanList.forEach((includedMealPlan, index) => {
       let mealRefArray = [];
       includedMealPlan.meal.forEach((meal) => {
         fetchedMealList.forEach((fetchedMeal) => {
@@ -15,12 +14,11 @@ exports.addUser = async (req, res) => {
             mealRefArray.push(fetchedMeal._id);
           }
         });
-      }
-      );
+      });
       includedMealPlanList[index].meal = mealRefArray;
       includedMealPlanList[index].date = new Date(includedMealPlan.date);
-    })
-    
+    });
+
     req.body.mealPlan = includedMealPlanList;
     console.log(req.body.mealPlan);
     const result = await user.create(req.body);
@@ -28,7 +26,6 @@ exports.addUser = async (req, res) => {
       message: "User created successfully",
       data: result,
     });
-
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
