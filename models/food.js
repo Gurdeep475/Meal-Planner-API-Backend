@@ -11,7 +11,8 @@ const Food = Schema({
     acceptedUnits: {
         type: [String],
         enum: ["ml", "liter", "kg", "g", "item"]
-    }
+    },
+    itemWeight: Number
 })
 
 

@@ -10,7 +10,8 @@ router.patch('/api/v1/updatemeal/:_id',mealControoler.updateMeal);
 
 router.post('/api/v1/adduser',userController.addUser);
 
-router.get('/api/v1/createMealPlan/:calories',mealControoler.createMealPlan);
+router.get('/api/v1/createMeal/:calories',mealControoler.createMeal);
+
 
 
 

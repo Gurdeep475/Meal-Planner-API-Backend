@@ -34,8 +34,6 @@ exports.updateMeal = async (req, res) => {
         const includedFoodItems = req.body.foodItems;
         req.body.foodItems = await processMeal(includedFoodItems);
         const result = await meal.findOneAndUpdate({_id: req.params._id}, req.body, {new: true});
-        console.log(result);
-        // const result = await meal.findOneAndUpdate({_id: req.params.id}, req.body);
         res.status(200).json({
             message: "Meal updated successfully",
             data: result,
